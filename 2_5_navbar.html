@@ -129,11 +129,11 @@
 
   <!-- STANDARD MENU -->
   <nav>
-    <div>
-      <div>
-        <a href="#">Logo</a>
-        <ul>
-          <li>
+    <div class="nav-wrapper">
+      <div class="container">
+        <a href="#" class="brand-logo center">Logo</a>
+        <ul id="nav-mobile" class="right hide-on-small-and-down">
+          <li class="active">
             <a href="#">Home</a>
           </li>
           <li>
@@ -149,16 +149,16 @@
 
   <br>
   <br>
-
   <!-- RESPONSIVE WITH SIDE MENU -->
-  <nav>
-    <div>
-      <div>
-        <a href="#">Logo</a>
-        <a href="#">
-          <i></i>
+  <nav class="blue lighten-2">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Logo</a>
+        <a class="button-collapse" data-activates="mobile-nav" href="#">
+          <i class="material-icons">menu</i>
         </a>
-        <ul>
+        <!--this is the main navbar-->
+        <ul class="right hide-on-med-and-down">
           <li>
             <a href="#">Home</a>
           </li>
@@ -171,22 +171,25 @@
 
           <!-- DROPDOWN TRIGGER -->
           <li>
-            <a href="#!">Dropdown
-              <i></i>
+            <a href="#!" class="dropdown-button" data-activates="navbar-dropdown">Dropdown
+              <i class="material-icons right">arrow_drop_down</i>
+              <!--it is now waiting for a ul with an id same as data-activates-->
             </a>
           </li>
           <!-- BUTTON LINK -->
           <li>
-            <a>Login</a>
+            <a class="btn waves-effect waves-light">Login</a>
           </li>
           <!-- ICON LINK -->
           <li>
             <a href="#">
-              <i>p</i>
+              <i class="material-icons">person</i>
             </a>
           </li>
         </ul>
-        <ul>
+        <!-- the main navbar ends here-->
+        <!--this will display in the side nav-->
+        <ul class="side-nav" id="mobile-nav">
           <li>
             <a href="#">Home</a>
           </li>
@@ -197,12 +200,12 @@
             <a href="#">Contact</a>
           </li>
         </ul>
+        <!--side nav ends here-->
       </div>
     </div>
   </nav>
-
   <!-- DROPDOWN MENU -->
-  <ul>
+  <ul id="navbar-dropdown" class="dropdown-content">
     <li>
       <a href="#">Link 1</a>
     </li>
@@ -218,15 +221,47 @@
   <br>
 
   <!-- FIXED NAVBAR -->
-  <div>
-
+  <div class="navbar-fixed">
+    <!--Makes the navbar fixed-->
+    <nav class="green lighten-2">
+      <div class="nav-wrapper">
+        <div class="container">
+          <a href="#" class="brand-logo center">Logo</a>
+          <ul id="nav-mobile" class="right hide-on-small-and-down">
+            <li class="active">
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </div>
 
   <br>
   <br>
 
   <!-- SEARCH BAR -->
+  <nav class="green">
+    <div class="nav-wrapper">
+      <form>
+        <div class="input-field">
+          <input type="search" id="search" required>
+          <label for="search" class="label-icon"><i class="material-icons">search</label>
+          <i class="material-icons">close</i>
 
+        </div>
+
+      </form>
+    </div>
+
+
+  </nav>
 
 
   <!-- END HERE -->
@@ -247,7 +282,7 @@
       });
 
       // JAVASCRIPT START HERE //
-
+      $('.button-collapse').sideNav();
 
 
 
